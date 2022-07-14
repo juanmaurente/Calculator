@@ -32,14 +32,19 @@ main {
 .calc__display {
   width: 100%;
   background-color: rgb(15, 15, 15);
-  color: rgb(255, 255, 240);
   text-align: end;
-  font-size: 30px;
   font-weight: 300;
-  padding: 15px 15px 55px 15px;
   letter-spacing: 2px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+}
+.calc__display--current {
+  font-size: 30px;
+  padding: 5px;
+  color: rgb(255, 255, 240);
+}
+.calc__display--previous {
+  font-size: 15px;
+  padding: 5px;
+  color: rgba(255, 255, 240, 0.664);
 }
 .calc__container {
   display: flex;

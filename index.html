@@ -20,28 +20,29 @@
 		</header>
 		<main>
 			<section class="calc">
-			<div class="calc__display">123456</div>
+			<div class="calc__display calc__display--previous" data-display>123456</div>
+			<div class="calc__display calc__display--current">123456</div>
 			<div class="calc__container">
-				<div class="calc__button calc__button--Clear">C</div>
-				<div class="calc__button calc__button--Sign">+/-</div>
-				<div class="calc__button calc__button--Percentage">%</div>
-				<div class="calc__button calc__button--operator">&divide</div>
-				<div class="calc__button calc__button--Number">7</div>
-				<div class="calc__button calc__button--Number">8</div>
-				<div class="calc__button calc__button--Number">9</div>
-				<div class="calc__button calc__button--operator">&times</div>
-				<div class="calc__button calc__button--Number">4</div>
-				<div class="calc__button calc__button--Number">5</div>
-				<div class="calc__button calc__button--Number">6</div>
-				<div class="calc__button calc__button--operator">-</div>
-				<div class="calc__button calc__button--Number">1</div>
-				<div class="calc__button calc__button--Number">2</div>
-				<div class="calc__button calc__button--Number">3</div>
-				<div class="calc__button calc__button--operator">+</div>
-				<div class="calc__button calc__button--Left">&#8592</div>
-				<div class="calc__button calc__button--Number">0</div>
-				<div class="calc__button calc__button--Decimal">.</div>
-				<div class="calc__button calc__button--operator">&#61</div>
+				<div class="calc__button calc__button--Clear" id="clear">C</div>
+				<div class="calc__button calc__button--Sign" id="sign">+/-</div>
+				<div class="calc__button calc__button--Percentage" id="percent">%</div>
+				<div class="calc__button calc__button--operator" id="divide">&divide</div>
+				<div class="calc__button calc__button--Number" data-value="7" >7</div>
+				<div class="calc__button calc__button--Number" data-value="8">8</div>
+				<div class="calc__button calc__button--Number" data-value="9">9</div>
+				<div class="calc__button calc__button--operator" id="times">&times</div>
+				<div class="calc__button calc__button--Number" data-value="4">4</div>
+				<div class="calc__button calc__button--Number" data-value="5">5</div>
+				<div class="calc__button calc__button--Number" data-value="6">6</div>
+				<div class="calc__button calc__button--operator" id="minus">-</div>
+				<div class="calc__button calc__button--Number" data-value="1">1</div>
+				<div class="calc__button calc__button--Number" data-value="2">2</div>
+				<div class="calc__button calc__button--Number" data-value="3">3</div>
+				<div class="calc__button calc__button--operator" id="plus">+</div>
+				<div class="calc__button calc__button--Left" id="delete">&#8592</div>
+				<div class="calc__button calc__button--Number" data-value="0">0</div>
+				<div class="calc__button calc__button--Decimal" id="dot">.</div>
+				<div class="calc__button calc__button--operator" id="equals">&#61</div>
 			</div>
 			</section>
 		</main>
