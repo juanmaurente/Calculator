@@ -37,14 +37,18 @@ main {
   letter-spacing: 2px;
 }
 .calc__display--current {
+  border-top: 0px;
+  height: 60px;
   font-size: 30px;
   padding: 5px;
   color: rgb(255, 255, 240);
 }
 .calc__display--previous {
+  height: 35px;
   font-size: 15px;
   padding: 5px;
   color: rgba(255, 255, 240, 0.664);
+  border-bottom: 0px;
 }
 .calc__container {
   display: flex;
@@ -59,6 +63,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(8, 0, 0, 0.1);
   font-size: 20px;
   font-weight: 300;
   background-color: rgb(211, 198, 198);
@@ -73,4 +78,7 @@ main {
 }
 .calc__button:hover {
   background-color: rgb(211, 163, 163);
+}
+.calc__button--zero {
+  min-width: 150px;
 }
