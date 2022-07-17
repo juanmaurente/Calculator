@@ -22,7 +22,7 @@ let previousOperation = '';
 let operator = '';
 let result;
 
-let operationRuning = false;
+let operationRunning = false;
 let decimalNumA = false;
 let decimalNumB = false;
 
@@ -36,14 +36,19 @@ numberButtonsAll.forEach((btn) => {
 operatorButtonsAll.forEach((btn) => {
 	btn.addEventListener('click', () => {
 		//First check if a previous operation is active
-		if (operationRuning == false) {
+		if (operationRunning == false) {
 			operandB = '';
 			operator = btn.innerHTML;
-			operationRuning = true;
+			operationRunning = true;
 			displayCurrentOperand();
 			displayPreviousOperand();
 		} else {
 			executeOperation();
+			operandB = '';
+			operator = btn.innerHTML;
+			operationRunning = true;
+			displayCurrentOperand();
+			displayPreviousOperand();
 		}
 	});
 });
@@ -54,7 +59,7 @@ operatorButtonsAll.forEach((btn) => {
  YES -> DecimalNumB = true ? don't add dot : add dot to operandB.
  */
 dotBtn.addEventListener('click', () => {
-	if (!operationRuning) {
+	if (!operationRunning) {
 		if (decimalNumA) {
 			return;
 		} else {
@@ -94,7 +99,7 @@ clearBtn.addEventListener('click', () => {
  */
 function addNumberToOperand(str) {
 	//check if I should work on operandA or B
-	if (operationRuning) {
+	if (operationRunning) {
 		//If I'm on B and user press 0
 		if (operandB == '' && str == '0') {
 			// Check if starts with 0 or non previous value
@@ -114,16 +119,21 @@ function addNumberToOperand(str) {
 }
 
 function displayCurrentOperand(str) {
-	if (operationRuning) {
+	if (operationRunning) {
 		return (document.getElementById('dispBg').innerHTML = operandB);
+	} else if (operandA != '') {
+		return (document.getElementById('dispBg').innerHTML = operandA);
 	}
-	return (document.getElementById('dispBg').innerHTML = operandA);
+	return (document.getElementById('dispBg').innerHTML = '0');
 }
 
 function displayPreviousOperand() {
-	return (document.getElementById(
-		'dispSm',
-	).innerHTML = `${operandA} ${operator}`);
+	if (operationRunning) {
+		return (document.getElementById(
+			'dispSm',
+		).innerHTML = `${operandA} ${operator}`);
+	}
+	return (document.getElementById('dispSm').innerHTML = '');
 }
 
 function executeOperation() {
@@ -146,17 +156,19 @@ function executeOperation() {
 		}
 	}
 	operandA = result;
+	result = undefined;
 	operandB = '';
 	operator = '';
-	operationRuning = false;
-	displayCurrentOperand(result);
-	displayPreviousOperand('0');
+	operationRunning = false;
+	displayCurrentOperand(operandA);
+	displayPreviousOperand();
 }
 
 function clear() {
-	operandA = '0';
+	operandA = '';
 	operandB = '';
 	operator = '';
-	location.reload();
-	return;
+	operationRunning = false;
+	displayCurrentOperand();
+	displayPreviousOperand();
 }
