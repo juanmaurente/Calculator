@@ -16,6 +16,10 @@ First I selected and stored in different variables the elements from the dom. Th
 - executeOperation() responsible to handle the operation between two operands.
 - clear()
 
+## Things to do or improve
+- Error handling / testing
+- Separation (use dot symbol) for large numbers
+
 # About the Project
 ## Outline
 - Create a README.md on your Calculator repository that includes a picture of the design you will be reproducing
