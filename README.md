@@ -1,7 +1,7 @@
 
 # JavaScript Calculator
 
-##Design
+## Design
 ![image](https://user-images.githubusercontent.com/26740359/184817141-9e7ab67a-51b3-4253-8171-80c8e225e65e.png)
 
 ## About the code
