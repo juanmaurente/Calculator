@@ -1,6 +1,20 @@
 
 # JavaScript Calculator
 
+##Design
+![image](https://user-images.githubusercontent.com/26740359/184817141-9e7ab67a-51b3-4253-8171-80c8e225e65e.png)
+
+## About the code
+The process I followed for this project was first to design and build the calculator, the different elements I wanted to display and to have an idea of their functionality. A simple calculator may seem simple and intuitive, but as a developer I decided to incorporate and "imitate" its behaviour. Once the "visual" part was done I focused on the functionality. 
+I basically followed the next steps:
+First I selected and stored in different variables the elements from the dom. Then I introduced the event listeners (for numbers first) with some logic so that I can determinate which operand I am currently working with and decide where to display it. Then the operators came to play and finally the clear button. Some of the functions I used (in plain english) where:
+- addNumberToOperand() responsible to handle each number the user has clicked.
+- displayCurrentOperand() responsible to display the current Operand in its corresponding container.
+- displayPreviousOperand() responsible to display the previous Operand in its corresponding container improving the UX.
+- executeOperation() responsible to handle the operation between two operands.
+- clear()
+
+# About the Project
 ## Outline
 - Create a README.md on your Calculator repository that includes a picture of the design you will be reproducing
 - Using HTML + SCSS, recreate the design that you chose
@@ -13,7 +27,7 @@
 - It should also have a “.” key
 
 ## Sample Image
-![image-asset](https://user-images.githubusercontent.com/26740359/178501108-170f6d8e-0ebb-4f74-9cba-aa56afd76481.png)
+
 
 ## JS code Explanation
 - We define variables for each button; also set1, set2 (set of numbers)
