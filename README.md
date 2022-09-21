@@ -7,7 +7,7 @@
 ## About the code
 This project has been developed using HTML, SCSS and JavaScript. 
 
-The process I followed for this project was first to design and build the calculator, the different elements I wanted to display and to have an idea of their functionality. A simple calculator may seem simple and intuitive, but as a developer I decided to incorporate and "imitate" its behaviour. Once the "visual" part was done I focused on the functionality. 
+The process I followed for this project was first to design and build the calculator, the different elements I wanted to display and to have an idea of their functionality. A simple calculator may seem simple and intuitive, but as a developer I decided to incorporate and "imitate" its behaviour. Once the "visual" part was done I focused on the functionality.. 
 I basically followed the next steps:
 First I selected and stored in different variables the elements from the dom. Then I introduced the event listeners (for numbers first) with some logic so that I can determinate which operand I am currently working with and decide where to display it. Then the operators came to play and finally the clear button. Some of the functions I used (in plain english) where:
 - addNumberToOperand() responsible to handle each number the user has clicked.
